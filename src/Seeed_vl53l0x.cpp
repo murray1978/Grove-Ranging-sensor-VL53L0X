@@ -395,7 +395,7 @@ VL53L0X_Error Seeed_vl53l0x::PerformContinuousRangingMeasurement(VL53L0X_Ranging
         if(VL53L0X_ERROR_NONE!=Status) return Status;
         if(RangingMeasurementData->RangeMilliMeter>=2000)
         {
-            Serial.println("out of ranger");
+            Serial.println("out of range");
         }
         else 
         {
@@ -438,8 +438,8 @@ VL53L0X_Error Seeed_vl53l0x::PerformSingleRangingMeasurement(VL53L0X_RangingMeas
              		RangingMeasurementData);
         milli_value_stop=millis();
 
-        Serial.print("time of mesurement: ");
-        Serial.println(milli_value_stop-milli_value_start);
+        //Serial.print("time of mesurement: ");
+        //Serial.println(milli_value_stop-milli_value_start);
 
         return Status;
     }
